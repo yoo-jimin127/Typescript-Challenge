@@ -1,0 +1,7 @@
+{
+    "compilerOptions": {
+        "allowJs": true,
+        "checkJs": true, // @ts-check와 동일한 역할
+        "noImplicitAny": true,
+    }
+}

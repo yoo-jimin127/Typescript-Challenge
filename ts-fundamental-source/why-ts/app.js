@@ -10,10 +10,16 @@ let address = document.querySelector('#address');
 let user = {};
 
 /**
+ * @typedef {object} Address
+ * @property {string} street
+ * @property {string} city
+ */
+
+/**
  * @typedef {object} User
  * @property {string} name
  * @property {string} email
- * @property {string} address
+ * @property {Address} address
  */
 
 /** 

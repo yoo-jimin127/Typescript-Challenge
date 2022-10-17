@@ -1,5 +1,5 @@
 // api url
-let url = 'https://jsonplaceholder.typicode.com/users';
+let url = 'https://jsonplaceholder.typicode.com/users/1';
 
 // dom
 let username = document.querySelector('#username');
@@ -9,9 +9,28 @@ let address = document.querySelector('#address');
 // user data
 let user = {};
 
+/**
+ * @typedef {object} User
+ * @property {string} name
+ * @property {string} email
+ * @property {string} address
+ */
+
+/** 
+ * @returns {Promise<User>} 
+ * */
+function fetchUser() {
+    return axios.get(url);
+}
+
+fetchUser() .then(function (res) {
+    console.log(res.name);
+    console.log(res.email);
+    console.log(res.address);
+})
+
 function startApp() {
-    axios
-        .get(url)
+    fetchUser()
         .then(function (res) {
             console.log(res);
             user = res.data;

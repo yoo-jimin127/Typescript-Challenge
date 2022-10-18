@@ -1,4 +1,4 @@
-let todoItems;
+let todoItems: string;
 
 // api
 function fetchTodoItems() {
@@ -11,12 +11,12 @@ function fetchTodoItems() {
 }
 
 // crud methods
-function fetchTodos() {
-  const todos = fetchTodoItems();
+function fetchTodos(): string {
+  const todos: [] = fetchTodoItems();
   return todos;
 }
 
-function addTodo(todo) {
+function addTodo(todo): void {
   todoItems.push(todo);
 }
 

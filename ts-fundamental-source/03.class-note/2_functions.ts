@@ -3,7 +3,7 @@ function sum_func(a: number, b: number): number {
     return a + b;
 }
 
-sum(10, 20);
+sum_func(10, 20);
 
 // 옵셔널 파라미터 - 함수의 선택적 파라미터
 function log(a: string, b?: string, c?: string): void {

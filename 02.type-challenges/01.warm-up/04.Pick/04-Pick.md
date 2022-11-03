@@ -68,5 +68,7 @@ type MyPick<T, K extends keyof T> = { [P in K]: T[P] }
 ```
 - `K`에 속한 모든 타입을 `P`로 명명해 새로운 객체의 키로 만듦
 - 해당 객체의 값이 되는 타입은 `extends keyof`로 주어지는 타입인 `T`로부터 받아옴
-    - `extends` : 정의된 타입을 이용해 제네릭의 타입을 제한하는 방법
+    - `extends` : 
+        - 인터페이스의 확장에 사용
+        - 정의된 타입을 이용해 제네릭의 타입을 제한하는 방법으로 사용
     - `keyof INTERFACE` : INTERFACE의 key들 중 하나가 제네릭이 됨을 명시

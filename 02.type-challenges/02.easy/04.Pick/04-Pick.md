@@ -59,8 +59,8 @@ type MyPick<T, K extends keyof T> = {
 ```
 
 ### ▶️ 타입을 이용한 풀이
-- Union 타입인 `K`를 받아와 `K`의 각 원소를 순회
-    → `K`로만 구성된 키를 가지도록 하는 새로운 타입을 만들어 반환(`Mapped Type` 적용 - `[P in K] : T[P]`)      
+- Union 타입인 `K`를 받아와 `K`의 각 원소를 순회     
+    → `K`로만 구성된 키를 가지도록 하는 새로운 타입을 만들어 반환(`Mapped Type` 적용 - `[P in K] : T[P]`)         
 - `Lookup Type`을 사용해 값의 타입을 가져와 사용 (이 때, 값의 타입 자체는 변하지 않음)
 
 ```ts

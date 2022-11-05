@@ -63,7 +63,8 @@ type Names = typeof alphabet[number];
     2. 입력받은 T(예제에서의 튜플)의 값을 바탕으로 `key:value`형태를 만들기 위해 `[K in keyof T]`로 튜플 순회    
         → 반환 값 : 인덱스가 문자열 처리된 값     
     3. const assertion을 적용해 `[K in T[number]]`으로 변경    
-        → 배열 값으로 구성된 union 타입 생성      
+        → 배열 값으로 구성된 union 타입 생성    
+    4. 객체 프로퍼티의 `key`가 될 수 있는 타입인 `string | number | boolean`으로 제한     
 ```ts
 type TupleToObject<T extends readonly (string | number | boolean)[]> = {
   [K in T[number]]: K;

@@ -22,6 +22,6 @@ type cases = [
 
 
 // ============= Your Code Here =============
-type Includes<T extends readonly any[], U> = (
-  {[A in keyof T]: Equal<T[A], U> }
-) extends false[] ? false : true
+type Includes<T extends readonly unknown[], U> = (
+  {[A in keyof T]: Equal<T[A], U>} extends false[] ? false : true
+)

@@ -15,3 +15,4 @@ type cases = [
 type Replace<S extends string, From extends string, To extends string> 
 = S extends `${infer head}${Exclude<From,''>}${infer tail}` ?
   `${head}${To}${tail}` : S
+  

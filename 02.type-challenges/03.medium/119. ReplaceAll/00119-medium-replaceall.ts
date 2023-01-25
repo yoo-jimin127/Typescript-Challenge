@@ -18,3 +18,4 @@ type cases = [
 type ReplaceAll<S extends string, From extends string, To extends string> = 
   S extends `${infer head}${Exclude<From,''>}${infer tail}` ?
     `${head}${To}${ReplaceAll<`${tail}`,From,To>}` : S
+    

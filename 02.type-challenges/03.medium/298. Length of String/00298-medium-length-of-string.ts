@@ -11,6 +11,6 @@ type cases = [
 
 // ============= Your Code Here =============
 type StringToArray<T extends string, S extends string[] = []> 
-  = T extends `${infer F}${infer Tail}` ? StringToArray<Tail, [...S, F]> : S
+  = T extends `${infer Head}${infer Tail}` ? StringToArray<Tail, [...S, Head]> : S
 
 type LengthOfString<S extends string> = StringToArray<S>['length'];
